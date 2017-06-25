@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.a11group.microfinanceapp.R;
-import com.a11group.microfinanceapp.api.Login;
+import com.a11group.microfinanceapp.model.Login;
 import com.a11group.microfinanceapp.api.MicrofinanceAPI;
 import com.a11group.microfinanceapp.model.Simulator;
 

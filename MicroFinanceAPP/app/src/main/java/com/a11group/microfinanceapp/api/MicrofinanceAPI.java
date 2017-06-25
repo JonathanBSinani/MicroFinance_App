@@ -8,6 +8,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.a11group.microfinanceapp.R;
+import com.a11group.microfinanceapp.model.Login;
 import com.a11group.microfinanceapp.model.Simulator;
 import com.a11group.microfinanceapp.trait.MicrofinanceSimulatorTrait;
 

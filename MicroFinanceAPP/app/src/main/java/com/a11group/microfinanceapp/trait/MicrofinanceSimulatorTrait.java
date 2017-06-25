@@ -1,6 +1,6 @@
 package com.a11group.microfinanceapp.trait;
 
-import com.a11group.microfinanceapp.api.Login;
+import com.a11group.microfinanceapp.model.Login;
 import com.a11group.microfinanceapp.model.Simulator;
 
 import retrofit2.Call;

@@ -1,4 +1,4 @@
-package com.a11group.microfinanceapp.api;
+package com.a11group.microfinanceapp.model;
 
 public class Login {
 
