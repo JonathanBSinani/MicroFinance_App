@@ -7,4 +7,7 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--<string name="base_url">https://backend-fatec.herokuapp.com/api/</string>-->
+    <string name="base_url">http://107.170.31.116/reserve/</string>
 </resources>

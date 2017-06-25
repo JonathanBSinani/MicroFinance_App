@@ -1,11 +1,10 @@
-package com.a11group.microfinanceapp.Activities;
+package com.a11group.microfinanceapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.a11group.microfinanceapp.Activities.LoginActivity;
 import com.a11group.microfinanceapp.R;
 
 public class SplashActivity extends AppCompatActivity {

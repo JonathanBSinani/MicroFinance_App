@@ -1,4 +1,4 @@
-package com.a11group.microfinanceapp.Activities;
+package com.a11group.microfinanceapp.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -14,6 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.a11group.microfinanceapp.R;
+import com.a11group.microfinanceapp.model.Login;
+import com.a11group.microfinanceapp.api.MicrofinanceAPI;
+import com.a11group.microfinanceapp.model.Simulator;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -52,6 +59,66 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Simulator.Create simulatorCreate = new Simulator.Create();
+        simulatorCreate.setBirthdate("25/01/1992");
+        simulatorCreate.setGender("male");
+        simulatorCreate.setMoney(15000.12);
+        simulatorCreate.setRetired(60);
+        simulatorCreate.setYear(20);
+
+        MicrofinanceAPI microfinanceAPI = new MicrofinanceAPI(this);
+        //microfinanceAPI.simulator(simulatorCreate).enqueue(simulatorCallback());
+
+        //Just for Test
+        microfinanceAPI.login().enqueue(loginCallback());
+    }
+
+    //Just for Test
+    private Callback<Login> loginCallback() {
+        return new Callback<Login>() {
+            @Override
+            public void onResponse(Call<Login> call, Response<Login> response) {
+                if (response.body() != null) {
+
+                    Toast.makeText(getApplicationContext(), response.body().getId().toString(), Toast.LENGTH_LONG).show();
+                } else {
+
+                    Toast.makeText(getApplicationContext(), "json bad format", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Login> call, Throwable t) {
+
+            }
+        };
+    }
+
+    private Callback<Simulator.Result> simulatorCallback() {
+
+        return new Callback<Simulator.Result>() {
+            @Override
+            public void onResponse(Call<Simulator.Result> call, Response<Simulator.Result> response) {
+
+                if (response.body() != null) {
+
+                    Simulator.Result simulatorResult = response.body();
+
+                    String monthly = "Contribute monthly is " + simulatorResult.getMonthlyContribution();
+
+                    Toast.makeText(getApplicationContext(), monthly, Toast.LENGTH_LONG).show();
+                } else {
+
+                    Toast.makeText(getApplicationContext(), "json bad format", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Simulator.Result> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(), "something goes wrong", Toast.LENGTH_LONG).show();
+            }
+        };
     }
 
     //função login
