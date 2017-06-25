@@ -1,4 +1,4 @@
-package com.a11group.microfinanceapp.Activities;
+package com.a11group.microfinanceapp.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;

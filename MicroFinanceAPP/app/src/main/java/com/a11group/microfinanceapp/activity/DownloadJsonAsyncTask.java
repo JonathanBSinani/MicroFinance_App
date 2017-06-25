@@ -1,9 +1,9 @@
-package com.a11group.microfinanceapp.Activities;
+package com.a11group.microfinanceapp.activity;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
-import com.a11group.microfinanceapp.Model.PrevidenciaModel;
+import com.a11group.microfinanceapp.model.Simulator;
 
 import java.util.List;
 
@@ -11,12 +11,12 @@ import java.util.List;
  * Created by Jonathan on 17/06/2017.
  */
 
-public class DownloadJsonAsyncTask extends AsyncTask<String, Void, List<PrevidenciaModel>>{
+public class DownloadJsonAsyncTask extends AsyncTask<String, Void, List<Simulator>>{
 
     ProgressDialog dialog;
 
     @Override
-    protected List<PrevidenciaModel> doInBackground(String... strings) {
+    protected List<Simulator> doInBackground(String... strings) {
         return null;
     }
 

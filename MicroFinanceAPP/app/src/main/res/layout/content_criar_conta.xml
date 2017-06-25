@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.a11group.microfinanceapp.Activities.CriarContaActivity"
+    tools:context="com.a11group.microfinanceapp.activity.CriarContaActivity"
     tools:showIn="@layout/activity_criar_conta"
     android:background="@drawable/background_degrade_radial">
 
