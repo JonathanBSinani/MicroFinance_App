@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.a11group.microfinanceapp">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.SplashActivity"
+            android:name=".activity.SplashScreenActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,21 +22,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activities.CriarContaActivity"
+            android:name=".activity.CreateAccountActivity"
             android:label="@string/title_activity_criar_conta"
-            android:parentActivityName=".Activities.LoginActivity"
+            android:parentActivityName=".activity.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.a11group.microfinanceapp.Activities.LoginActivity" />
+            android:value="com.a11group.microfinanceapp.activity.LoginActivity" />
+
         <activity
-            android:name=".Activities.TelaPrincipalActivity"
+            android:name=".activity.HomeScreenActivity"
             android:label="@string/title_activity_tela_principal"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.NewSimulationActivity"
+            android:label="@string/title_activity_new_simulation"
+            android:parentActivityName=".activity.HomeScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.a11group.microfinanceapp.activity.HomeScreenActivity" />
+        </activity>
     </application>
 
 </manifest>

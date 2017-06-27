@@ -1,4 +1,4 @@
-package com.a11group.microfinanceapp.Activities;
+package com.a11group.microfinanceapp.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.a11group.microfinanceapp.R;
 
-public class CriarContaActivity extends AppCompatActivity {
+public class CreateAccountActivity extends AppCompatActivity {
 
     private static final String TAG = "CriarConta";
 
@@ -30,7 +30,7 @@ public class CriarContaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_criar_conta);
+        setContentView(R.layout.activity_create_account);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -71,7 +71,7 @@ public class CriarContaActivity extends AppCompatActivity {
 
         btnInscreve.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(CriarContaActivity.this);
+        final ProgressDialog progressDialog = new ProgressDialog(CreateAccountActivity.this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setIndeterminate(true);
         progressDialog.setProgress(0);

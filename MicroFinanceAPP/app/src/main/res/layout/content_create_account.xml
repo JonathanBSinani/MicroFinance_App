@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.a11group.microfinanceapp.Activities.CriarContaActivity"
-    tools:showIn="@layout/activity_criar_conta"
+    tools:context="com.a11group.microfinanceapp.activity.CreateAccountActivity"
+    tools:showIn="@layout/activity_create_account"
     android:background="@drawable/background_degrade_radial">
 
     <LinearLayout

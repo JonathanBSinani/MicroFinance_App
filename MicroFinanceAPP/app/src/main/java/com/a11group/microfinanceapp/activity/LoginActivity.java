@@ -1,4 +1,4 @@
-package com.a11group.microfinanceapp.Activities;
+package com.a11group.microfinanceapp.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         linkInscrever.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tela_criaConta = new Intent(LoginActivity.this, CriarContaActivity.class);
+                Intent tela_criaConta = new Intent(LoginActivity.this, CreateAccountActivity.class);
                 startActivity(tela_criaConta);
             }
         });
@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onLoginSucess(){
         btnlogin = (Button) findViewById(R.id.btn_login);
         btnlogin.setEnabled(true);
-        Intent intent = new Intent(LoginActivity.this, TelaPrincipalActivity.class);
+        Intent intent = new Intent(LoginActivity.this, HomeScreenActivity.class);
         startActivity(intent);
 //        finish();
     }
